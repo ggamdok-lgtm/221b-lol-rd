@@ -1,0 +1,138 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:30px;
+    background:#091428;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+h1{
+    text-align:center;
+    color:#c8aa6e;
+}
+
+.hidden{
+    display:none;
+}
+
+#playerInputs{
+    max-width:900px;
+    margin:auto;
+}
+
+.player-row{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.player-name{
+    flex:1;
+}
+
+.player-name,
+.champ-count{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#1e2328;
+    color:white;
+}
+
+.champ-count{
+    width:120px;
+}
+
+button{
+    display:block;
+    margin:20px auto;
+    padding:15px 30px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#c8aa6e;
+    color:#091428;
+    font-weight:bold;
+}
+
+#resultContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+}
+
+.player-card{
+    background:#1e2328;
+    border:2px solid #c8aa6e;
+    border-radius:12px;
+    padding:15px;
+}
+
+.player-card h3{
+    margin-top:0;
+}
+
+.champion-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.champion{
+    width:100px;
+    height:140px;
+    perspective:1000px;
+}
+
+.flip-card{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 1s;
+}
+
+.flip-card.flipped{
+    transform:rotateY(180deg);
+}
+
+.card-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:10px;
+}
+
+.card-back{
+    background:#1e2328;
+    border:2px solid #c8aa6e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    color:#c8aa6e;
+}
+
+.card-front{
+    background:#1e2328;
+    border:2px solid #c8aa6e;
+    transform:rotateY(180deg);
+    overflow:hidden;
+}
+
+.card-front img{
+    width:100%;
+    height:100px;
+    object-fit:cover;
+}
+
+.card-front p{
+    margin:5px 0;
+    text-align:center;
+    font-size:13px;
+}

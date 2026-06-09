@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>롤 랜덤 챔피언 추첨기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="setupPage">
+
+    <h1>LEAGUE OF LEGENDS RANDOM PICK</h1>
+
+    <div id="playerInputs"></div>
+
+    <button id="startBtn">
+        랜덤 챔피언 추첨
+    </button>
+
+</div>
+
+<div id="resultPage" class="hidden">
+
+    <h1>챔피언 추첨 결과</h1>
+
+    <div id="resultContainer"></div>
+
+    <button onclick="location.reload()">
+        다시 추첨하기
+    </button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
